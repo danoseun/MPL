@@ -4,10 +4,17 @@ export const messages = {
     success: 'request was successful',
     notFound: 'resource not available',
     badRequest: 'something bad happened',
-    unAuthorized: 'username or password incorrect',
+    unAuthorized: 'Email or password is incorrect',
     deleted: 'resource successfully deleted',
     conflict: 'resource already exists!',
     invalidToken: 'Invalid token supplied',
     noToken: 'No token supplied',
-    forbidden: 'You do not have permissions to access this route'
+    failedToConnect: 'failed to connect to db',
+    connectedToDatabase: 'connected to db',
+    forbidden: 'You do not have permissions to access this route',
+    limitExceeded: 'API Request limit exceeded. Please try again later',
+    userNotFound: 'User not found',
+    incorrectToken: 'Token is incorrect',
+    authenticate: 'Please authenticate',
+    notAllowed: 'Only admins can acces this route'
   };
