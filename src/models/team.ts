@@ -1,4 +1,5 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
+import { CreateTeamDto } from '../dto/team';
 
 const teamSchema = new mongoose.Schema({
   name: {
@@ -8,6 +9,6 @@ const teamSchema = new mongoose.Schema({
   },
 })
 
-export const Team = mongoose.model('Team', teamSchema)
+export const Team = mongoose.model<CreateTeamDto>('Team', teamSchema)
 
 

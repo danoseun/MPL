@@ -1,12 +1,12 @@
-import { Router } from 'express'
-import { userRouter } from './user'
-// import fixtureRouter from './fixture'
-// import teamRouter from './team'
+import { Router } from 'express';
+import { userRouter } from './user';
+import { fixtureRouter } from './fixture';
+import { teamRouter } from './team';
 
-export const router = Router()
+export const allRouter = Router()
 
-router.use('/auth', userRouter)
-// router.use('/', fixtureRouter)
-// router.use('/', teamRouter)
+allRouter.use('/auth', userRouter)
+allRouter.use('/', fixtureRouter)
+allRouter.use('/', teamRouter)
 
 
