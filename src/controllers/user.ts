@@ -49,10 +49,6 @@ export class UserController {
   async loginUser(req:express.Request, res:express.Response) {
     const errors = validate.verifyLogin(req)
     if (errors.length > 0) {
-    //   return res.status(400).json({
-    //     status: 400,
-    //     errors,
-    //   })
         return errorResponse(res, statusCodes.badRequest, errors)
     }
 

@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import { CreateFixtureDto } from '../dto/fixture';
 
 const fixtureSchema = new mongoose.Schema({
   matchDate: {
@@ -36,4 +37,4 @@ const fixtureSchema = new mongoose.Schema({
 
 fixtureSchema.index({slug: 'text'})
 
-export const Fixture = mongoose.model('Fixture', fixtureSchema);
+export const Fixture = mongoose.model<CreateFixtureDto>('Fixture', fixtureSchema);

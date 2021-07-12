@@ -1,7 +1,7 @@
 import express from 'express';
 import logger from 'morgan';
 import dotenv from 'dotenv';
-import { router } from './routes';
+import { allRouter } from './routes';
 import session from 'express-session'
 import connectRedis from 'connect-redis'
 import client, {rateLimiter} from './redis'
@@ -33,7 +33,7 @@ app.use(logger('dev'));
 
 
 app.use(rateLimiter)
-app.use(router)
+app.use(allRouter)
 
 
 
